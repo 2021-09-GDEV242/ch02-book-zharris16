@@ -56,9 +56,13 @@ class Book
         }
     }
     
-    public void setRefNumber(String ref)
-    {
-        refNumber = ref;
+    public void setRefNumber(String ref){
+        if (refNumber.length() <= 2){
+            refNumber = "";
+            System.out.println("Invalid Reference Number");
+        } else {
+            refNumber = ref;
+        }
     }
     
     public String getRefNumber(){
